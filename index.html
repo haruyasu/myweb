@@ -30,6 +30,7 @@
 </head>
 
 <body>
+
     <header class="header">
         <div class="container">
             <img class="profile-image img-responsive pull-left" src="assets/images/profile.png" alt="Hathle" width="180" height="180"/>
@@ -43,7 +44,39 @@
                     <li class="last-item"><a href="https://github.com/haruyasu" target="_blank"><i class="fa fa-github-alt"></i></a></li>
                 </ul>
             </div>
-            <a class="btn btn-cta-secondary pull-right" onclick="load()"><i class="fa fa-home"></i>Portfolio Web Site</a>
+            <a id="modal-open" class="btn btn-cta-secondary pull-right"><i class="fa fa-envelope-o"></i>Contact</a>
+            <div id="modal-content">
+                <h3><i class="fa fa-envelope-o"></i> Contact</h3>
+                <div class="row form">
+                    <label for="input-name" class="col-sm-3 control-label">お名前</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="input-name" placeholder="お名前">
+                    </div>
+                </div>
+
+                <div class="row form">
+                    <label for="input-mail" class="col-sm-3 control-label">メールアドレス</label>
+                    <div class="col-sm-9">
+                        <input type="email" class="form-control" id="input-mail" placeholder="メールアドレス">
+                    </div>
+                </div>
+
+                <div class="row form">
+                    <label class="col-sm-3 control-label">内容</label>
+                    <div class="col-sm-9">
+                        <textarea class="form-control" rows="5"></textarea>
+                    </div>
+                </div>
+
+                <div class="row form">
+                  <div class="col-sm-6">
+                    <button type="submit" class="btn btn-cta-secondary pull-right formbtn"><i class="fa fa-paper-plane-o"></i> 送信</button>
+                  </div>
+                  <div class="col-sm-6">
+                    <button id="modal-close" class="btn btn-cta-secondary formbtn">閉じる</button>
+                  </div>
+                </div>
+            </div>
         </div>
     </header>
 
