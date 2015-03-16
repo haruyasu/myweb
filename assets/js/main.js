@@ -41,9 +41,21 @@ jQuery(document).ready(function($) {
 		var h = $(window).height();
 		var cw = $("#modal-content").outerWidth();
 		var ch = $("#modal-content").outerHeight();
+
 		$("#modal-content").css({
             "left": ((w - cw) / 2) + "px",
             "top": ((h - ch) / 2) + "px"
         })
+
+        if(w < 750) {
+    		$("#modal-content").css({
+                "width": "100%"
+            })
+        }
+        else {
+    		$("#modal-content").css({
+                "width": "50%"
+            })
+        }
 	}
 });
