@@ -35,7 +35,7 @@ a:focus {
   margin: 0 auto;
 }
 #modal-content {
-  width: 100%;
+  width: 50%;
   margin: 0;
   padding: 20px;
   border: 10px solid #778492;
