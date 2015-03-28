@@ -58,4 +58,42 @@ jQuery(document).ready(function($) {
             })
         }
 	}
+
+    var milkcocoa = new MilkCocoa("https://io-ui5w7yucf.mlkcca.com");
+    var mesDS = milkcocoa.dataStore('contact');
+
+    $('.contact_submit').on('click', function(){
+        var name = $('input[name=contact_name]').val(),
+            email = $('input[name=contact_email]').val(),
+            body = $('textarea[name=contact_body]').val();
+
+        var mes = '';
+        if(!name) mes += 'お名前 ';
+        if(!email) mes += 'メールアドレス ';
+        if(!body) mes += 'メッセージ ';
+
+        if(!name || !email || !body){
+            mes += 'が入力されていません。';
+        }
+        else {
+            pushContact({
+                name : name,
+                email : email,
+                body : body
+            });
+            mes = '送信しました。';
+
+    		$("#modal-content,#modal-overlay").fadeOut("slow",function() {
+    			$('#modal-overlay').remove();
+    		});
+            $('.form-control').val("");
+        }
+    });
+
+    function pushContact(body) {
+        mesDS.push(body,function(data) {
+            console.log(data);
+        });
+    }
+
 });

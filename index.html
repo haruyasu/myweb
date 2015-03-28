@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.css">
     <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+    <script src="http://cdn.mlkcca.com/v0.2.6/milkcocoa.js"></script>
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -50,27 +51,27 @@
                 <div class="row form">
                     <label for="input-name" class="col-sm-3 control-label">お名前</label>
                     <div class="col-sm-9">
-                        <input type="text" class="form-control" id="input-name" placeholder="お名前">
+                        <input type="text" name="contact_name" class="form-control" id="input-name" placeholder="お名前">
                     </div>
                 </div>
 
                 <div class="row form">
                     <label for="input-mail" class="col-sm-3 control-label">メールアドレス</label>
                     <div class="col-sm-9">
-                        <input type="email" class="form-control" id="input-mail" placeholder="メールアドレス">
+                        <input type="email" name="contact_email" class="form-control" id="input-mail" placeholder="メールアドレス">
                     </div>
                 </div>
 
                 <div class="row form">
                     <label class="col-sm-3 control-label">内容</label>
                     <div class="col-sm-9">
-                        <textarea class="form-control" rows="5"></textarea>
+                        <textarea name="contact_body" class="form-control" rows="5"></textarea>
                     </div>
                 </div>
 
                 <div class="row form">
                   <div class="col-xs-6">
-                    <button type="submit" class="btn btn-cta-secondary pull-right formbtn"><i class="fa fa-paper-plane-o"></i> 送信</button>
+                    <button type="submit" class="btn btn-cta-secondary pull-right formbtn contact_submit"><i class="fa fa-paper-plane-o"></i> 送信</button>
                   </div>
                   <div class="col-xs-6">
                     <button id="modal-close" class="btn btn-cta-secondary formbtn">閉じる</button>
@@ -354,7 +355,7 @@
             <small class="copyright">© 2015 Hathle Portfolio Web Site</small>
         </div>
     </footer>
-  
+
     <script type="text/javascript" src="assets/plugins/jquery-1.11.2.min.js"></script>
     <script type="text/javascript" src="assets/plugins/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
