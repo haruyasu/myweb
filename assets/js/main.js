@@ -59,7 +59,7 @@ jQuery(document).ready(function($) {
         }
 	}
 
-    var milkcocoa = new MilkCocoa("https://io-ui5w7yucf.mlkcca.com");
+    var milkcocoa = new MilkCocoa("https://io-ii82k4ep6.mlkcca.com");
     var mesDS = milkcocoa.dataStore('contact');
 
     $('.contact_submit').on('click', function(){
