@@ -380,6 +380,15 @@
                     </div>
                 </aside>
 
+                <aside class="info aside section">
+                    <div class="section-inner">
+                        <h2 class="heading">Instagram</h2>
+                        <div class="content">
+                            <div class="instagram"></div>
+                        </div>
+                    </div>
+                </aside>
+
                 <aside class="list conferences aside section">
                     <div class="section-inner">
                         <h2 class="heading">Sports Event</h2>
@@ -460,6 +469,32 @@
         		return false;
         	});
         });
+
+        $(function(){
+            var photoViewNum = 1	//表示する件数
+            $(".instagram").html('<p class="txt01">ロード中...</p>');
+            $.ajax({
+                url: "https://api.instagram.com/v1/users/self/media/recent/",
+                data: {
+                    access_token: "1287363923.e86f609.84ea27aff6254970af704671a1330153",
+                    count: photoViewNum
+                },
+                cache: false,
+                dataType: "jsonp",
+                error: function() {
+                    $(".instagram").html('<p class="txt01">情報の取得に失敗しました。リロードするか時間を開けてアクセスして下さい。</p>');
+                },
+                success: function(data) {
+                    $(".txt01").remove();
+                    $(".instagram").append('<ul class="img">')
+                    for (var i = 0, length = photoViewNum; i < length; i++) {
+                        $(".instagram .img").append($("<li>").append($("<a>").attr("href", data.data[i].link).attr("target", "_blank").append($("<img>").attr("src", data.data[i].images.standard_resolution.url))));
+                    }
+                }
+            });
+        });
+
+
     </script>
 </body>
 

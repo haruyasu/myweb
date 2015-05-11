@@ -557,3 +557,24 @@ a.dotted-link:hover {
     width: 1360px;
   }
 }
+
+.instagram .txt01 {
+    text-align: center;
+}
+
+.instagram ul {
+    padding: 0 !important;
+    overflow: hidden;
+}
+
+.instagram ul li {
+    margin: 10px 0;
+    list-style-type: none;
+}
+
+.instagram ul li img {
+    width: 100%;
+    border: solid 1px #ccc;
+    padding: 4px;
+    border-radius: 3px;
+}
