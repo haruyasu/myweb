@@ -568,13 +568,13 @@ a.dotted-link:hover {
 }
 
 .instagram ul li {
-    margin: 10px 0;
+    margin: 10px;
     list-style-type: none;
 }
 
 .instagram ul li img {
-    width: 100%;
-    border: solid 1px #ccc;
-    padding: 4px;
+    width: 50%;
+    padding: 6px;
     border-radius: 3px;
+    float: left;
 }
